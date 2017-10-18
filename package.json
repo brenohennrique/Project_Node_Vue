@@ -1,0 +1,15 @@
+{
+  "name": "cadastro_usuario",
+  "version": "1.0.0",
+  "description": "sistema de cadastro de usuario, realizado em Node, express e Vue, utilizando banco de dados Mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/brenohennrique/Project_Node_Vue.git"
+  },
+  "author": "Breno Hennrique",
+  "license": "ISC"
+}
