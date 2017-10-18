@@ -9,5 +9,17 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 Vue.use(VueAxios, axios);
 
-const router = new VueRouter({ mode: 'history' });
+// importação dos componentes
+import App from './App.vue'
+import CreateProfile from './components/CreateProfile.vue';
+
+const routes = [
+  {
+    name: 'CreateProfile',
+    path: '/',
+    component: CreateProfile
+  }
+];
+
+const router = new VueRouter({ mode: 'history', routes: routes });
 new Vue(Vue.util.extend({ router })).$mount('#app');
