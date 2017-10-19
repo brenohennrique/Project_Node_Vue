@@ -12,12 +12,18 @@ Vue.use(VueAxios, axios);
 // importação dos componentes
 import App from './App.vue'
 import CreateProfile from './components/CreateProfile.vue';
+import DisplayProfile from './components/DisplayProfile.vue'
 
 const routes = [
   {
     name: 'CreateProfile',
     path: '/create/profile',
     component: CreateProfile
+  },
+  {
+    name: 'DisplayProfile',
+    path: '/',
+    component: DisplayProfile
   }
 ];
 
