@@ -10,7 +10,7 @@ import config from './config/DB';
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB).then(
   () => { console.log('Database is connected') },
-  err => { console.log('Can not connect to the Database ' err) }
+  err => { console.log('Can not connect to the Database', err) }
 );
 
 const app = express();

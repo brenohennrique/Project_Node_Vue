@@ -14,6 +14,7 @@ import App from './App.vue'
 import CreateProfile from './components/CreateProfile.vue';
 import DisplayProfile from './components/DisplayProfile.vue';
 import EditProfile from './components/EditProfile.vue';
+import server from '../server';
 
 const routes = [
   {

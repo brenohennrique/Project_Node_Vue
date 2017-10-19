@@ -1,4 +1,9 @@
 module.exports = {
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   // This is the "main" file which should include all other modules
   entry: './src/main.js',
   // Where should the compiled file go?
