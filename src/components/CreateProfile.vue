@@ -26,9 +26,11 @@
     },
     methods: {
       addProfile(){
-
+        let uri = 'http://localhost:4000/profiles/add';
+        this.axios.post(uri, this.profile).then((response) => {
+          this.$router.push({name: 'DisplayProfile'})
+        })
       }
-    }
-    
+    }    
   }
 </script>

@@ -16,7 +16,7 @@ import CreateProfile from './components/CreateProfile.vue';
 const routes = [
   {
     name: 'CreateProfile',
-    path: '/',
+    path: '/create/profile',
     component: CreateProfile
   }
 ];
