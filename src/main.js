@@ -14,6 +14,7 @@ import App from './App.vue'
 import CreateProfile from './components/CreateProfile.vue';
 import DisplayProfile from './components/DisplayProfile.vue';
 import EditProfile from './components/EditProfile.vue';
+import DisplayUser from './components/DisplayUser.vue';
 // import server from '../server';
 
 const routes = [
@@ -24,13 +25,18 @@ const routes = [
   },
   {
     name: 'DisplayProfile',
-    path: '/',
+    path: '/displayProfile',
     component: DisplayProfile
   },
   {
     name: 'EditProfile',
     path: '/edit/:id',
     component: EditProfile
+  },
+  {
+    name: 'DisplayUser',
+    path: '/',
+    component: DisplayUser
   }
 ];
 
