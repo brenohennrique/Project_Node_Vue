@@ -1,13 +1,13 @@
 'use strict';
 
-var express = require('express'),
-    path = require('path'),
-    bodyParser = require('body-parser'),
-    cors = require('cors'),
-    mongoose = require('mongoose'),
-    profileRoutes = require('./expressRoutes/profileRoutes'),
-    userRoutes = require('./expressRoutes/userRoutes'),
-    config = require('./config/DB');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import profileRoutes from './expressRoutes/profileRoutes';
+import userRoutes from './expressRoutes/userRoutes';
+import config from './config/DB';
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB).then(
