@@ -15,6 +15,7 @@ import CreateProfile from './components/CreateProfile.vue';
 import DisplayProfile from './components/DisplayProfile.vue';
 import EditProfile from './components/EditProfile.vue';
 import DisplayUser from './components/DisplayUser.vue';
+import CreateUser from './components/CreateUser.vue';
 // import server from '../server';
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
     name: 'DisplayUser',
     path: '/',
     component: DisplayUser
+  },
+  {
+    name: 'CreateUser',
+    path: '/create/user',
+    component: CreateUser
   }
 ];
 
