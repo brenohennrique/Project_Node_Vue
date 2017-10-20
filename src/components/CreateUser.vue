@@ -10,16 +10,15 @@
           </div>
           <div class="form-group">
             <label>Idade:</label>
-            <input type="text" class="form-control" v-model="user.age">
+            <input type="number" class="form-control" v-model="user.age">
           </div>
           <div class="form-group">
             <label>Perfil:</label>
-            <select v-model="selected">
-              <option v-for="(profile, profiles) in sortedProfiles" class="profile" :key="profiles">
-                <option value="">{{ profile.name }}</option>
+            <select v-model="user.profile">
+              <option v-for="profile in profiles">
+                {{ profile.name }}
               </option>
             </select>
-            <input type="text" class="form-control" v-model="user.profile">
           </div>
         </div>
         </div><br />
@@ -41,24 +40,13 @@
     created: function(){
         this.fetchProfiles();
     },
-    computed: {
-      sortedProfiles: function() {
-        let sorted = this.profiles
-        return sorted.sort(function (a,b) {
-          if (a.name < b.name) return -1
-          if (a.name > b.name) return 1
-          return 0
-        })
-      }
-    },
     methods: {
-      addProfile(){
-        let uri = 'http://localhost:4000/user/add';
+      addUser(){
+        let uri = 'http://localhost:4000/users/add';
         this.axios.post(uri, this.user).then((response) => {
           this.$router.push({name: 'DisplayUser'})
         })
       },
-
       fetchProfiles(){
         let uri = 'http://localhost:4000/profiles';
         this.axios.get(uri).then((response) => {

@@ -25,8 +25,8 @@
                     <td>{{ user.name }}</td>
                     <td>{{ user.age }}</td>
                     <td>{{ user.profile }}</td>
-                    <td><router-link :to="{name: 'EditUser', params: { id: profile._id }}" class="btn btn-primary">Editar</router-link></td>
-                    <td><button class="btn btn-danger" v-on:click="deleteUser(profile._id)">Deletar</button></td>
+                    <td><router-link :to="{name: 'EditUser', params: { id: user._id }}" class="btn btn-primary">Editar</router-link></td>
+                    <td><button class="btn btn-danger" v-on:click="deleteUser(user._id)">Deletar</button></td>
                 </tr>
             </tbody>
         </table>
@@ -65,7 +65,7 @@
             deleteUser(id)
             {
               let uri = 'http://localhost:4000/users/delete/'+id;
-              this.profiles.splice(id, 1);
+              this.users.splice(id, 1);
               this.axios.get(uri);
             }
         }
