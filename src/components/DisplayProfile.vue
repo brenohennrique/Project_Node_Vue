@@ -20,10 +20,10 @@
 
             <tbody>
                 <tr v-for="profile in profiles">
-                    <td>{{ profiles._id }}</td>
-                    <td>{{ profiles.name }}</td>
-                    <td><router-link :to="{name: 'EditProfile', params: { id: profiles._id }}" class="btn btn-primary">Editar</router-link></td>
-                    <td><button class="btn btn-danger" v-on:click="deleteProfile(profiles._id)">Deletar</button></td>
+                    <td>{{ profile._id }}</td>
+                    <td>{{ profile.name }}</td>
+                    <td><router-link :to="{name: 'EditProfile', params: { id: profile._id }}" class="btn btn-primary">Editar</router-link></td>
+                    <td><button class="btn btn-danger" v-on:click="deleteProfile(profile._id)">Deletar</button></td>
                 </tr>
             </tbody>
         </table>

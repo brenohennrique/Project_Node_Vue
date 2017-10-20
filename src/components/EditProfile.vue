@@ -37,7 +37,7 @@
                     this.profile = response.data;
                 });
             },
-            updateItem()
+            updateProfile()
             {
               let uri = 'http://localhost:4000/profiles/update/' + this.$route.params.id;
                 this.axios.post(uri, this.profile).then((response) => {

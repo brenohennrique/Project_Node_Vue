@@ -1,11 +1,11 @@
 'use strict';
 
-import express from 'express';
+var express= require('express');
 var app = express();
 var profileRoutes = express.Router();
 
 // Require Profile Model in our routes module
-var Profile from '../models/Profile'
+var Profile = require('../models/Profile');
 
 // Defined store route
 profileRoutes.route('/add').post( (req, res) => {
@@ -33,8 +33,8 @@ profileRoutes.route('/').get( (req, res) => {
 // Defined edit route
 profileRoutes.route('/edit/:id').get( (req, res) => {
   var id = req.params.id;
-  Profile.findById(id (err, profile) => {
-    res.json(item);
+  Profile.findById(id, function(err, profile) {
+    res.json(profile);
   });
 });
 

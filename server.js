@@ -1,11 +1,12 @@
 'use strict';
 
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import config from './config/DB';
+var express = require('express'),
+    path = require('path'),
+    bodyParser = require('body-parser'),
+    cors = require('cors'),
+    mongoose = require('mongoose'),
+    profileRoutes = require('./expressRoutes/profileRoutes'),
+    config = require('./config/DB');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB).then(
@@ -22,6 +23,6 @@ app.use('/profiles', profileRoutes);
 
 const port = process.env.PORT || 4000;
 
-const server = app.listen( () => {
-  console.log('Listening on port ' + port);
+ app.listen(port, function() {
+  console.log('Escutando na porta ' + port);
 });

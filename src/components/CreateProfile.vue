@@ -1,17 +1,17 @@
 <template>
   <div>
     <h1>Cadastro de Perfil</h1>
-    <form>
+    <form v-on:submit.prevent="addProfile">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Perfil Descição:</label>
-            <input type="text" class="form-control" v-model="profile.title">
+            <label>Perfil:</label>
+            <input type="text" class="form-control" v-model="profile.name">
           </div>
         </div>
-      </div><br />
+        </div><br />
         <div class="form-group">
-          <button class="btn btn-primary">Adicionar Perfil</button>
+          <button class="btn btn-primary">Cadastrar Perfil</button>
         </div>
     </form>
   </div>
@@ -31,6 +31,6 @@
           this.$router.push({name: 'DisplayProfile'})
         })
       }
-    }    
+    }
   }
 </script>
