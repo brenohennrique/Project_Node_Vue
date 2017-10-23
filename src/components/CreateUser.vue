@@ -55,9 +55,6 @@
         this.fetchProfiles();
     },
     methods: {
-      addUser(){
-
-      },
       fetchProfiles(){
         let uri = 'http://localhost:4000/profiles';
         this.axios.get(uri).then((response) => {
